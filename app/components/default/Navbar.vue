@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import Button from '../button.vue';
+
+</script>
+
 <template>
   <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
@@ -126,6 +131,11 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <Button label="Contact" to="/contact" variant="btn-primary" />
           </li>
         </ul>
       </div>
