@@ -5,12 +5,17 @@ export default defineNuxtConfig({
 
   modules: [
     '@pinia/nuxt',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-bootstrap-icons',
+    'nuxt-swiper'
   ],
   css: [
     'bootstrap/dist/css/bootstrap.min.css',
     'animate.css/animate.min.css'
   ],
+  
+
+
   // plugins: [
   //   '~/plugins/bootstrap.client.ts'
   // ]
