@@ -4,7 +4,7 @@ import Button from '../button.vue';
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light ">
+  <nav class="navbar navbar-expand-lg navbar-light py-5 sticky-top">
     <div class="container">
       <a class="navbar-brand" href="/">
         <img
@@ -12,7 +12,8 @@ import Button from '../button.vue';
           loading="lazy"
           decoding="async"
           alt="Logo"
-          height="30"
+          height="26"
+          width="134"
         />
       </a>
 
@@ -142,3 +143,14 @@ import Button from '../button.vue';
     </div>
   </nav>
 </template>
+
+
+<style>
+.navbar {
+  background: rgba(255, 255, 255, 0.8); /* màu trắng trong suốt */
+  backdrop-filter: blur(10px);           /* hiệu ứng mờ */
+  -webkit-backdrop-filter: blur(10px);   /* Safari support */
+  transition: background 0.3s ease;
+} 
+
+</style>

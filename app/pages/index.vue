@@ -1,34 +1,35 @@
 <template>
   <!-- Phần Hero -->
-  <div class="container p-5">
-    <div class="row align-items-stretch">
-      <div class="col-5 my-auto">
-        <h1>A digital agency specializing on</h1>
-        <span
-          :key="animationKey"
-          class="animate__animated animate__fadeInDown rotator-fade text-primary"
-          style="display: inline-block"
-        >
-          {{ currentText }}
-        </span>
-
-        <p class="">
-          We are an award winning design agency that strongly believes in the
+  <div class="container py-5">
+    <div class="row align-items-center py-5">
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h1 class="fw-bold mb-3 display-3">
+          A digital agency specializing on
+          <span
+            :key="animationKey"
+            class="d-inline-block animate__animated animate__fadeInDown text-primary"
+          >
+            {{ currentText }}
+          </span>
+        </h1>
+        <p class="lead text-muted mb-4">
+          We are an award-winning design agency that strongly believes in the
           power of creative ideas.
         </p>
-
         <Button label="Get Started" to="#" variant="btn-primary" />
       </div>
 
-      <div class="col-7 d-flex my-auto">
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
         <img src="/heroHome.png" loading="lazy" class="img-fluid" />
       </div>
     </div>
   </div>
 
   <!-- Phần icon -->
-  <div class="container p-3">
-    <p class="text-center p-5">Trusted by over 2K+ clients across the world</p>
+  <div class="container p-5">
+    <p class="text-center p-3">Trusted by over 2K+ clients across the world</p>
 
     <div class="row row-cols-7 align-items-stretch">
       <div class="col my-auto">
@@ -58,11 +59,13 @@
   <!-- Phần giới thiệu service của web -->
   <div class="container py-5">
     <div>
-      <p class="text-center text-uppercase">What We Do?</p>
+      <p class="text-center text-primary fw-bold mb-2 text-uppercase p-3">
+        What We Do?
+      </p>
 
-      <h3 class="text-center">
-        The service we offer is specifically designed to meet your needs.
-      </h3>
+      <h2 class="text-center fw-bold mx-auto w-50">
+        The service we offer is specificallydesigned to meet your needs.
+      </h2>
 
       <div class="container py-5">
         <div class="row text-center g-4 align-items-stretch">
@@ -115,11 +118,13 @@
     </div>
 
     <!-- Chiến lược của chúng tôi -->
-    <div class="container py-5">
-      <div class="row">
+    <div class="container py-5 ">
+      <div class="row align-items-center gy-4">
         <div class="col-6">
-          <p>Our Strategy</p>
-          <h4>Here are 3 working steps to organize our projects.</h4>
+          <p class="text-primary fw-bold">Our Strategy</p>
+          <h2 class="fw-bold">
+            Here are 3 working steps to organize our projects.
+          </h2>
 
           <p>
             Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
@@ -284,12 +289,12 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container py-5">
       <div class="row align-items-stretch">
         <div class="col-4 d-flex">
           <div class="container py-5 my-auto">
-            <p>Company Facts</p>
-            <h4>We are proud of our design team</h4>
+            <p class="text-primary fw-bold">Company Facts</p>
+            <h2 class="fw-bold">We are proud of our design team</h2>
             <p>
               Just sit back and relax while we take care of your business needs
               for you.
@@ -326,10 +331,10 @@
     <div class="row row-cols-4 g-4">
       <!-- Team Member 1 -->
       <div class="col">
-        <div class="card text-center p-3 shadow-lg">
+        <div class="card p-3 shadow-lg">
           <img
             src="/team1.jpg"
-            class="img-fluid rounded-circle mb-3"
+            class="img-fluid rounded-circle mb-3 w-50"
             alt="team-1"
           />
           <h5>Coriss Ambady</h5>
@@ -337,7 +342,7 @@
           <p class="text-muted">
             Fermentum massa justo sit amet risus morbi leo.
           </p>
-          <nav class="nav justify-content-center">
+          <nav class="nav ">
             <a href="#" class="nav-link text-primary"
               ><i class="bi bi-twitter"></i
             ></a>
@@ -350,10 +355,10 @@
 
       <!-- Team Member 2 -->
       <div class="col">
-        <div class="card text-center p-3 shadow-lg">
+        <div class="card p-3 shadow-lg">
           <img
             src="/team2.jpg"
-            class="img-fluid rounded-circle mb-3"
+            class="img-fluid rounded-circle mb-3 w-50"
             alt="team-2"
           />
           <h5>Cory Zamora</h5>
@@ -361,7 +366,7 @@
           <p class="text-muted">
             Fermentum massa justo sit amet risus morbi leo.
           </p>
-          <nav class="nav justify-content-center">
+          <nav class="nav ">
             <a href="#" class="nav-link text-primary"
               ><i class="bi bi-twitter"></i
             ></a>
@@ -373,10 +378,10 @@
       </div>
 
       <div class="col">
-        <div class="card text-center p-3" shadow-lg>
+        <div class="card p-3" shadow-lg>
           <img
             src="/team3.jpg"
-            class="img-fluid rounded-circle mb-3"
+            class="img-fluid rounded-circle mb-3 w-50"
             alt="team-2"
           />
           <h5>Nikolas Brooten</h5>
@@ -384,7 +389,7 @@
           <p class="text-muted">
             Fermentum massa justo sit amet risus morbi leo.
           </p>
-          <nav class="nav justify-content-center">
+          <nav class="nav ">
             <a href="#" class="nav-link text-primary"
               ><i class="bi bi-twitter"></i
             ></a>
@@ -396,10 +401,10 @@
       </div>
 
       <div class="col">
-        <div class="card text-center p-3 shadow-lg">
+        <div class="card p-3 shadow-lg ">
           <img
             src="/team4.jpg"
-            class="img-fluid rounded-circle mb-3"
+            class="img-fluid rounded-circle mb-3 w-50"
             alt="team-2"
           />
           <h5>Jackie Sanders</h5>
@@ -407,7 +412,7 @@
           <p class="text-muted">
             Fermentum massa justo sit amet risus morbi leo.
           </p>
-          <nav class="nav justify-content-center">
+          <nav class="nav">
             <a href="#" class="nav-link text-primary"
               ><i class="bi bi-twitter"></i
             ></a>
@@ -421,16 +426,16 @@
   </div>
 
   <!-- Phần Project -->
-  <section class="hero py-16">
+  <section class="hero py-5">
     <div class="text-center">
-      <p>Latest Projects</p>
-      <h4>
+      <p class="fw-bold text-primary">Latest Projects</p>
+      <h2 class="fw-bold w-50 mx-auto">
         Check out some of our awesome projects with creative ideas and great
         design.
-      </h4>
+      </h2>
     </div>
 
-    <div class="container mx-auto text-center">
+    <div class="container mx-auto">
       <Swiper
         :modules="[Navigation, Autoplay]"
         :slides-per-view="1"
@@ -446,7 +451,7 @@
         class="my-12 max-w-6xl mx-auto"
       >
         <SwiperSlide v-for="(item, i) in projects" :key="i" class="p-4">
-          <div class="overflow-hidden rounded-2xl shadow-lg group bg-white">
+          <div class="overflow-hidden rounded-2xl  group bg-white">
             <!-- Hình ảnh -->
             <figure class="rounded-t-2xl overflow-hidden">
               <img
@@ -458,7 +463,7 @@
             <!-- Tiêu đề & category -->
             <div class="p-5 text-left">
               <h2 class="text-xl font-semibold mb-2">
-                <a href="#" class="hover:text-blue-600 transition">
+                <a href="#" class="hover:text-blue-600 transition" style="text-decoration: none;">
                   {{ item.title }}
                 </a>
               </h2>
@@ -473,12 +478,12 @@
   <!-- Happy Customers -->
 
   <section class="py-5 testimonials">
-    <div class="container">
-      <div class="text-center">
-        <p>Happy Customers</p>
-        <h4>
+    <div class="container py-5">
+      <div class="text-center py-5">
+        <p class="fw-bold text-primary"> Happy Customers</p>
+        <h2 class="mx-auto fw-bold w-50">
           Don't take our word for it. See what customers are saying about us.
-        </h4>
+        </h2>
       </div>
       <div class="row g-4">
         <div
