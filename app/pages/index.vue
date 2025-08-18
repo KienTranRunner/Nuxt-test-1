@@ -3,16 +3,16 @@
   <div class="container p-5">
     <div class="row align-items-stretch">
       <div class="col-5 my-auto">
-        <h1>A digital agency specializing on</h1>
+        <h1 class="fw-bold display-3">A digital agency specializing on</h1>
         <span
           :key="animationKey"
-          class="animate__animated animate__fadeInDown rotator-fade text-primary"
+          class="animate__animated animate__fadeInDown rotator-fade text-primary fw-bold display-3"
           style="display: inline-block"
         >
           {{ currentText }}
         </span>
 
-        <p class="">
+        <p >
           We are an award winning design agency that strongly believes in the
           power of creative ideas.
         </p>
@@ -27,8 +27,8 @@
   </div>
 
   <!-- Phần icon -->
-  <div class="container p-3">
-    <p class="text-center p-5">Trusted by over 2K+ clients across the world</p>
+  <div class="container p-5">
+    <p class="text-center p-2">Trusted by over 2K+ clients across the world</p>
 
     <div class="row row-cols-7 align-items-stretch">
       <div class="col my-auto">
@@ -58,7 +58,7 @@
   <!-- Phần giới thiệu service của web -->
   <div class="container py-5">
     <div>
-      <p class="text-center text-uppercase">What We Do?</p>
+      <p class="text-center text-uppercase text-primary">What We Do?</p>
 
       <h3 class="text-center">
         The service we offer is specifically designed to meet your needs.
@@ -118,8 +118,8 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-6">
-          <p>Our Strategy</p>
-          <h4>Here are 3 working steps to organize our projects.</h4>
+          <p class="text-primary">Our Strategy</p>
+          <h3 class="fw-bold ">Here are 3 working steps to organize our projects.</h3>
 
           <p>
             Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
@@ -288,7 +288,7 @@
       <div class="row align-items-stretch">
         <div class="col-4 d-flex">
           <div class="container py-5 my-auto">
-            <p>Company Facts</p>
+            <p class="text-primary">Company Facts</p>
             <h4>We are proud of our design team</h4>
             <p>
               Just sit back and relax while we take care of your business needs
@@ -421,9 +421,9 @@
   </div>
 
   <!-- Phần Project -->
-  <section class="hero py-16">
+  <section class="hero py-5">
     <div class="text-center">
-      <p>Latest Projects</p>
+      <p class="text-primary">Latest Projects</p>
       <h4>
         Check out some of our awesome projects with creative ideas and great
         design.
@@ -446,7 +446,7 @@
         class="my-12 max-w-6xl mx-auto"
       >
         <SwiperSlide v-for="(item, i) in projects" :key="i" class="p-4">
-          <div class="overflow-hidden rounded-2xl shadow-lg group bg-white">
+          <div class="overflow-hidden rounded-2xl group bg-white">
             <!-- Hình ảnh -->
             <figure class="rounded-t-2xl overflow-hidden">
               <img
@@ -475,7 +475,7 @@
   <section class="py-5 testimonials">
     <div class="container">
       <div class="text-center">
-        <p>Happy Customers</p>
+        <p class="text-primary">Happy Customers</p>
         <h4>
           Don't take our word for it. See what customers are saying about us.
         </h4>
@@ -519,7 +519,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <p>FAQ</p>
+          <p class="text-primary">FAQ</p>
           <h4>
             If you don't see an answer to your question, you can send us an
             email from our contact form.
