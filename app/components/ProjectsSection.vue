@@ -56,10 +56,8 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Autoplay } from "swiper/modules";
 
-// import CSS
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const projects = [
   { image: "/sp1.jpg", title: "Cras Fermentum Sem", category: "Mobile Design" },

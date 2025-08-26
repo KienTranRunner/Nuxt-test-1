@@ -136,7 +136,7 @@ import Button from '../button.vue';
 
 
           <li class="nav-item">
-            <Button label="Contact" to="/contact" variant="btn-primary" />
+            <Button label="Contact" to="/" variant="btn-primary" />
           </li>
         </ul>
       </div>

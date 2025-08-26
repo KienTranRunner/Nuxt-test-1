@@ -54,7 +54,9 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
+import Button from './button.vue';
+
 
 const faqs = [
   {
