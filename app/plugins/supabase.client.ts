@@ -1,19 +1,18 @@
-import { createClient } from '@supabase/supabase-js'
+// import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NUXT_PUBLIC_SUPABASE_URL as string
-const supabaseKey = process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY as string
+// const supabaseUrl = process.env.NUXT_PUBLIC_SUPABASE_URL as string
+// const supabaseKey = process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY as string
 
 
 
-export default defineNuxtPlugin(() => {
-  const supabase = createClient(supabaseUrl, supabaseKey, 
-  //   {
-  //   auth: { persistSession: false }
-  // }
-)
-  return {
-    provide: {
-      supabase
-    }
-  }
-})
+// export default defineNuxtPlugin(() => {
+//   const supabase = createClient(supabaseUrl, supabaseKey, {
+//     auth: { persistSession: false }
+//   })
+//   return {
+//     provide: {
+//       supabase
+//     }
+    
+//   }
+// })
