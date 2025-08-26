@@ -1,42 +1,33 @@
-<template>
-  
-
-  
-  <HeroSection />
-
-  <ClientsSection />
-
-  <ServicesSection />
-  <ProcessSection />
-  <SolutionsSection />
-
-  <TeamSection />
-  <ProjectsSection />
-  <TestimonialsSection />
-  <FaqSection />
-
-  
-</template>
-
 <script setup lang="ts">
-import Button from "~/components/button.vue";
-import { ref, onMounted } from "vue";
-import HeroSection from '~/components/HeroSection.vue'
-import ClientsSection from '~/components/ClientsSection.vue'
-import ServicesSection from '~/components/ServicesSection.vue'
-import ProcessSection from '~/components/ProcessSection.vue'
-import SolutionsSection from '~/components/SolutionsSection.vue'
-import TeamSection from '~/components/TeamSection.vue'
+const homepageSections = await useHomepageData()
 
-import ProjectsSection from '~/components/ProjectsSection.vue'
-import TestimonialsSection from '~/components/TestimonialsSection.vue'
-import FaqSection from '~/components/FaqSection.vue'
-
-
-
-
+const heroData = homepageSections.find(s => s.section_key === 'hero')
+const clientsData = homepageSections.find(s => s.section_key === 'clients')
+const servicesData = homepageSections.find(s => s.section_key === 'services')
+const processData = homepageSections.find(s => s.section_key === 'process')
+const solutionsData = homepageSections.find(s => s.section_key === 'solutions')
+const teamData = homepageSections.find(s => s.section_key === 'team')
+const projectsData = homepageSections.find(s => s.section_key === 'projects')
+const testimonialsData = homepageSections.find(s => s.section_key === 'testimonials')
+const FaqData = homepageSections.find(s => s.section_key === 'faq')
 
 </script>
+
+FaqData
+
+<template>
+  <HeroSection :data="heroData" />
+  <ClientsSection :data="clientsData" />
+  <ServicesSection :data="servicesData" />
+  <ProcessSection :data="processData" />
+  <SolutionsSection :data="solutionsData" />
+  <TeamSection :data="teamData" />
+  <ProjectsSection :data="projectsData" />
+  <TestimonialsSection :data="testimonialsData" />
+  <FaqSection :data="FaqData" />
+
+
+</template>
 
 <style>
 /* .rotator-fade {

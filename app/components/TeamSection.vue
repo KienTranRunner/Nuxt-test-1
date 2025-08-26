@@ -4,7 +4,7 @@
       <div class="col-4 d-flex">
         <div class="container py-5 my-auto">
           <p class="text-primary fw-bold">Company Facts</p>
-          <h2 class="fw-bold">We are proud of our design team</h2>
+          <h2 class="fw-bold">{{ data.title }}</h2>
           <p>
             Just sit back and relax while we take care of your business needs
             for you.
@@ -38,88 +38,22 @@
     </div>
   </div>
 
+  <!-- Team Members -->
   <div class="container py-5">
     <div class="row row-cols-4 g-4">
-      <!-- Team Member 1 -->
-      <div class="col">
+      <div
+        class="col"
+        v-for="member in data.homepage_items"
+        :key="member.id"
+      >
         <div class="card p-3 shadow-lg">
           <img
-            src="/team1.jpg"
+            :src="member.image_url"
             class="img-fluid rounded-circle mb-3 w-50"
-            alt="team-1"
+            :alt="member.title"
           />
-          <h5>Coriss Ambady</h5>
-          <p class="fw-semibold">Financial Analyst</p>
-          <p class="text-muted">
-            Fermentum massa justo sit amet risus morbi leo.
-          </p>
-          <nav class="nav">
-            <a href="#" class="nav-link text-primary"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a href="#" class="nav-link text-primary"
-              ><i class="bi bi-facebook"></i
-            ></a>
-          </nav>
-        </div>
-      </div>
-
-      <!-- Team Member 2 -->
-      <div class="col">
-        <div class="card p-3 shadow-lg">
-          <img
-            src="/team2.jpg"
-            class="img-fluid rounded-circle mb-3 w-50"
-            alt="team-2"
-          />
-          <h5>Cory Zamora</h5>
-          <p class="fw-semibold">Marketing Specialist</p>
-          <p class="text-muted">
-            Fermentum massa justo sit amet risus morbi leo.
-          </p>
-          <nav class="nav">
-            <a href="#" class="nav-link text-primary"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a href="#" class="nav-link text-primary"
-              ><i class="bi bi-facebook"></i
-            ></a>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card p-3" shadow-lg>
-          <img
-            src="/team3.jpg"
-            class="img-fluid rounded-circle mb-3 w-50"
-            alt="team-2"
-          />
-          <h5>Nikolas Brooten</h5>
-          <p class="fw-semibold">Sales Manager</p>
-          <p class="text-muted">
-            Fermentum massa justo sit amet risus morbi leo.
-          </p>
-          <nav class="nav">
-            <a href="#" class="nav-link text-primary"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a href="#" class="nav-link text-primary"
-              ><i class="bi bi-facebook"></i
-            ></a>
-          </nav>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card p-3 shadow-lg">
-          <img
-            src="/team4.jpg"
-            class="img-fluid rounded-circle mb-3 w-50"
-            alt="team-2"
-          />
-          <h5>Jackie Sanders</h5>
-          <p class="fw-semibold">Investment Planner</p>
+          <h5>{{ member.title }}</h5>
+          <p class="fw-semibold">{{ member.description }}</p>
           <p class="text-muted">
             Fermentum massa justo sit amet risus morbi leo.
           </p>
@@ -136,3 +70,19 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+  data: {
+    title: string
+    subtitle?: string
+    homepage_items: Array<{
+      id: number
+      title: string
+      description: string
+      link_url?: string
+      image_url?: string
+    }>
+  }
+}>()
+</script>
