@@ -7,17 +7,26 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-bootstrap-icons',
-    'nuxt-swiper'
+    'nuxt-swiper',
+
+
   ],
+
   css: [
     'bootstrap/dist/css/bootstrap.min.css',
     'animate.css/animate.min.css'
   ],
+  imports: {
+    dirs: ['stores'],
+  },
+
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+      supabaseKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY
+    }
+  }
+ 
   
-
-
-  // plugins: [
-  //   '~/plugins/bootstrap.client.ts'
-  // ]
 
 })

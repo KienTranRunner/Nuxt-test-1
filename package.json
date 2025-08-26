@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/image": "^1.11.0",
     "@pinia/nuxt": "^0.11.2",
+    "@supabase/supabase-js": "^2.56.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.7",
     "nuxt": "^4.0.3",
