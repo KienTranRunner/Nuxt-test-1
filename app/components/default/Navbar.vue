@@ -4,7 +4,7 @@ import Button from '../button.vue';
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light py-5 sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top">
     <div class="container">
       <a class="navbar-brand" href="/">
         <img

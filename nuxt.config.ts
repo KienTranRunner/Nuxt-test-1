@@ -20,7 +20,9 @@ export default defineNuxtConfig({
   
   css: [
     'bootstrap/dist/css/bootstrap.min.css',
-    'animate.css/animate.min.css'
+    'animate.css/animate.min.css',
+    '~/assets/css/main.css'
+
   ],
   imports: {
     dirs: ['stores'],
