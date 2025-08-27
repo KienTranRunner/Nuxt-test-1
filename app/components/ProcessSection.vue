@@ -36,7 +36,7 @@
                   class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-4"
                   style="width: 80px; height: 60px"
                 >
-                  <span class="fw-bold">{{ index + 1 | twoDigits }}</span>
+                  <span class="fw-bold">{{ index + 1 }}</span>
                 </div>
 
                 <div>
