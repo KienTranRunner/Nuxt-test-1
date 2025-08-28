@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { useHomepageStore } from '@/stores/useHomepageStore'
 
 const homepageStore = useHomepageStore()
@@ -18,4 +18,24 @@ onMounted(() => {
   <ProjectsSection v-if="homepageStore.projectsData" :data="homepageStore.projectsData" />
   <TestimonialsSection v-if="homepageStore.testimonialsData" :data="homepageStore.testimonialsData" />
   <FaqSection v-if="homepageStore.faqData" :data="homepageStore.faqData" />
+</template> -->
+
+<script setup lang="ts">
+import { useHomepageStore } from '~/stores/useHomepageStore'
+
+const homepage = useHomepageStore()
+
+onMounted(() => {
+  homepage.fetchSections()
+})
+</script>
+
+<template>
+  <div>
+    <h1>Homepage</h1>
+    <div v-for="section in homepage.sections" :key="section.id">
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.subtitle }}</p>
+    </div>
+  </div>
 </template>

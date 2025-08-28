@@ -1,4 +1,6 @@
 // composables/useHomepageData.ts
+
+
 export const useHomepageData = async () => {
     const client = useSupabaseClient()
   
