@@ -3,7 +3,7 @@ import { ref, onMounted } from "vue";
 import Button from "~/components/button.vue";
 
 defineProps<{
-  data: {
+  my_hero: {
     title: string
     subtitle: string
     homepage_items: Array<{
@@ -35,16 +35,16 @@ onMounted(() => {
       <div class="row align-items-center py-5">
         <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
           <h1 class="fw-bold mb-3 display-2">
-            {{ data.title }}
+            {{ my_hero.title }}
             <span :key="animationKey" class="d-inline-block text-primary animate__animated animate__fadeInDown">
               {{ currentText }}
             </span>
           </h1>
-          <p class="lead text-muted mb-4">{{ data.subtitle }}</p>
+          <p class="lead text-muted mb-4">{{ my_hero.subtitle }}</p>
           <Button
-            v-if="data.homepage_items.length"
-            :label="data.homepage_items[0].title"
-            :to="data.homepage_items[0].link_url"
+            v-if="my_hero.homepage_items.length"
+            :label="my_hero.homepage_items[0].title"
+            :to="my_hero.homepage_items[0].link_url"
             variant="btn-primary"
           />
         </div>
@@ -52,8 +52,8 @@ onMounted(() => {
         <!-- Right column: hero image -->
         <div class="col-lg-6 text-center">
           <img
-            v-if="data.homepage_items.length"
-            :src="data.homepage_items[0].image_url"
+            v-if="my_hero.homepage_items.length"
+            :src="my_hero.homepage_items[0].image_url"
             class="img-fluid"
             alt="Hero Image"
           />

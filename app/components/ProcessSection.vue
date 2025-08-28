@@ -5,7 +5,7 @@
         <!-- Text Left -->
         <div class="col-6">
           <p class="text-primary fw-bold">Our Strategy</p>
-          <h2 class="fw-bold">{{ data.title }}</h2>
+          <h2 class="fw-bold">{{ my_process.title }}</h2>
 
           <p>
             Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
@@ -27,7 +27,7 @@
         <div class="col-6">
           <div 
             class="card shadow-sm mb-3" 
-            v-for="(item, index) in data.homepage_items" 
+            v-for="(item, index) in my_process.homepage_items" 
             :key="item.id"
           >
             <div class="card-body">
@@ -54,7 +54,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  data: {
+  my_process: {
     title: string
     subtitle?: string
     homepage_items: Array<{

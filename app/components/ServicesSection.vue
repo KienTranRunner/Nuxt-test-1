@@ -5,14 +5,14 @@
     </p>
 
     <h2 class="text-center fw-bold mx-auto w-50">
-      {{ data.title }}
+      {{ my_services.title }}
     </h2>
 
     <div class="container ">
       <div class="row text-center g-4 align-items-stretch py-5">
       <div 
         class="col-md-4 my-auto" 
-        v-for="(item, index) in data.homepage_items" 
+        v-for="(item, index) in my_services.homepage_items" 
         :key="index"
       >
         <img
@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  data: {
+  my_services: {
     title: string;
     subtitle?: string;
     homepage_items: Array<{

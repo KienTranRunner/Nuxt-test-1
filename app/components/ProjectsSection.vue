@@ -3,7 +3,7 @@
     <div class="text-center">
       <p class="fw-bold text-primary">Latest Projects</p>
       <h2 class="fw-bold w-50 mx-auto">
-        {{ data.title }}
+        {{ my_project.title }}
       </h2>
     </div>
   </section>
@@ -24,7 +24,7 @@
       class="my-12 max-w-6xl mx-auto"
     >
       <SwiperSlide
-        v-for="(item, i) in data.homepage_items"
+        v-for="(item, i) in my_project.homepage_items"
         :key="item.id || i"
         class="p-4"
       >
@@ -64,7 +64,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 defineProps<{
-  data: {
+  my_project: {
     title: string
     subtitle?: string
     homepage_items: Array<{

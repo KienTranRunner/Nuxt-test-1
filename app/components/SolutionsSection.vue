@@ -4,7 +4,7 @@
       <div class="row align-items-center g-4">
         <div class="col-md-6">
           <img
-            :src="data.homepage_items[0].image_url"
+            :src="my_solution.homepage_items[0].image_url"
             loading="lazy"
             alt="why-choose-us"
             class="img-fluid rounded"
@@ -13,7 +13,7 @@
 
         <div class="col-md-6">
           <p class="text-primary fw-bold mb-2">Why Choose Us?</p>
-          <h4 class="mb-4">{{data.title}}</h4>
+          <h4 class="mb-4">{{my_solution.title}}</h4>
 
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -95,7 +95,7 @@
 <script setup lang="ts">
 
 defineProps<{
-  data: {
+  my_solution: {
     title: string
     subtitle?: string
     homepage_items: Array<{

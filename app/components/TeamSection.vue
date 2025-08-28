@@ -4,7 +4,7 @@
       <div class="col-4 d-flex">
         <div class="container py-5 my-auto">
           <p class="text-primary fw-bold">Company Facts</p>
-          <h2 class="fw-bold">{{ data.title }}</h2>
+          <h2 class="fw-bold">{{ my_team.title }}</h2>
           <p>
             Just sit back and relax while we take care of your business needs
             for you.
@@ -43,7 +43,7 @@
     <div class="row row-cols-4 g-4">
       <div
         class="col"
-        v-for="member in data.homepage_items"
+        v-for="member in my_team.homepage_items"
         :key="member.id"
       >
         <div class="card p-3 shadow-lg">
@@ -73,7 +73,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  data: {
+  my_team: {
     title: string
     subtitle?: string
     homepage_items: Array<{

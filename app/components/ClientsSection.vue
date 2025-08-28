@@ -2,7 +2,7 @@
   <!-- Phần icon -->
   <div class="container p-5">
     <p class="text-center p-3">
-      {{ data.title }}
+      {{ my_client.title }}
     </p>
 
     <div class="row row-cols-7 align-items-stretch">
@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  data: {
+  my_client: {
     title: string;
     subtitle: string;
     homepage_items: Array<{

@@ -5,7 +5,7 @@
         <!-- Phần tiêu đề FAQ -->
         <div class="col-lg-6">
           <p class="text-primary fw-bold">FAQ</p>
-          <h4>{{ data.title }}</h4>
+          <h4>{{ my_faq.title }}</h4>
           <p>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis
@@ -19,7 +19,7 @@
           <div id="accordion-3" class="accordion-wrapper">
             <div
               class="card accordion-item shadow-sm"
-              v-for="(faq, i) in data.homepage_items"
+              v-for="(faq, i) in my_faq.homepage_items"
               :key="faq.id"
             >
               <div class="card-header" :id="`accordion-heading-${i}`">
@@ -55,7 +55,7 @@
 import Button from './button.vue'
 
 defineProps<{
-  data: {
+  my_faq: {
     title: string
     subtitle?: string
     homepage_items: Array<{

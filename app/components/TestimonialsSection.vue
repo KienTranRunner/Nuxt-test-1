@@ -4,14 +4,14 @@
       <div class="text-center py-5">
         <p class="fw-bold text-primary">Happy Customers</p>
         <h2 class="mx-auto fw-bold w-50">
-          {{ data.title }}
+          {{ my_testimonials.title }}
         </h2>
       </div>
 
       <div class="row g-4">
         <div
           class="col-md-6 col-xl-4"
-          v-for="item in data.homepage_items"
+          v-for="item in my_testimonials.homepage_items"
           :key="item.id"
         >
           <div class="card shadow-lg h-100">
@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  data: {
+  my_testimonials: {
     title: string
     subtitle?: string
     homepage_items: Array<{
